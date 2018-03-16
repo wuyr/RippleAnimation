@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/text"
+            android:textSize="22sp"
+            android:text="汝州接唱）低回觅花径。望只盼救活；红鸾命。早证未了情。（素秋接唱）因何泪交迸。好似杜鹃啼绝岭。（汝州接唱）确是杜鹃啼绝岭。唉，忽染相思症，悲破碎了心灵"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btn_2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="end"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/text2"
+            android:textSize="22sp"
+            android:text="汝州接唱）低回觅花径。望只盼救活；红鸾命。早证未了情。（素秋接唱）因何泪交迸。好似杜鹃啼绝岭。（汝州接唱）确是杜鹃啼绝岭。唉，忽染相思症，悲破碎了心灵"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_view"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="red" />
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="green" />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="blue" />
+
+        <Button
+            android:id="@+id/yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="yellow" />
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="black" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
