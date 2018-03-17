@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
@@ -16,19 +17,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View mNavigationView, mButton1, mButton2;
-    private TextView mTextView1, mTextView2;
+    private View mLeftNavigationView, mRightNavigationView;
+    private View[] mChildViews;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main_view);
         initStatusBar();
-        mNavigationView = findViewById(R.id.navigation_view);
-        mButton1 = findViewById(R.id.btn_1);
-        mButton2 = findViewById(R.id.btn_2);
-        mTextView1 = findViewById(R.id.text);
-        mTextView2 = findViewById(R.id.text2);
+        mLeftNavigationView = findViewById(R.id.navigation_left);
+        mRightNavigationView = findViewById(R.id.navigation_right);
+        ViewGroup viewGroup = findViewById(R.id.root_view);
+        mChildViews = new View[viewGroup.getChildCount()];
+        for (int i = 0; i < mChildViews.length; i++) {
+            mChildViews[i] = viewGroup.getChildAt(i);
+        }
     }
 
     public void onClick(View view) {
@@ -50,15 +53,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.black:
                 color = Color.DKGRAY;
                 break;
+            case R.id.cyan:
+                color = Color.CYAN;
+                break;
             default:
                 color = Color.TRANSPARENT;
                 break;
         }
-        mNavigationView.setBackgroundColor(color);
-        mButton1.setBackgroundColor(color);
-        mButton2.setBackgroundColor(color);
-        mTextView1.setTextColor(color);
-        mTextView2.setTextColor(color);
+        updateColor(color);
+    }
+
+    private void updateColor(int color) {
+        mLeftNavigationView.setBackgroundColor(color);
+        mRightNavigationView.setBackgroundColor(color);
+        for (View view : mChildViews) {
+            if (view instanceof TextView) {
+                ((TextView) view).setTextColor(color);
+            } else {
+                view.setBackgroundColor(color);
+            }
+        }
     }
 
     private void initStatusBar() {

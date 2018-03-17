@@ -1,59 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
     tools:openDrawer="start">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/btn_1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@mipmap/ic_launcher" />
-
-        <TextView
+        <LinearLayout
+            android:id="@+id/root_view"
             android:layout_width="match_parent"
-            android:id="@+id/text"
-            android:textSize="22sp"
-            android:text="汝州接唱）低回觅花径。望只盼救活；红鸾命。早证未了情。（素秋接唱）因何泪交迸。好似杜鹃啼绝岭。（汝州接唱）确是杜鹃啼绝岭。唉，忽染相思症，悲破碎了心灵"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/btn_2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="end"
-            android:src="@mipmap/ic_launcher" />
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:id="@+id/text2"
-            android:textSize="22sp"
-            android:text="汝州接唱）低回觅花径。望只盼救活；红鸾命。早证未了情。（素秋接唱）因何泪交迸。好似杜鹃啼绝岭。（汝州接唱）确是杜鹃啼绝岭。唉，忽染相思症，悲破碎了心灵"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(素秋接唱)露冷缘何迷花径，自做不平鸣，痴心也可敬。少见俗世有还阳令，又几见蝶化亡灵？(汝州接唱)低徊觅花径，望救活那红鸾命，再续那未了情。(素秋接唱)你因何泪交迸。好，好似杜鹃啼绝岭。(汝州接唱)确是杜鹃啼绝岭。忽染相思症，悲破碎了心灵。"
+                android:textSize="20sp" />
 
-    <LinearLayout
-        android:id="@+id/navigation_view"
-        android:layout_width="180dp"
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（愤然起唱爽中板下句）花魁恨，一语恼孤鸾。。赏灯谁断风筝线。盘秋谁断并头莲。。（趋快）有千金，难买还魂券。秋灯灭，难以再重燃，更莫效临昂道士将人骗。（拉腔）"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="end"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（王黼大惊爽中板下句）旧时门外客，原是新状元。。不是冤家无相见。偏是冤家现堂前。。宰阁无心存欺骗。（汝州紧接下句）招魂难有再生船。。（拂袖介）（王黼紧接上句）出画堂，与你重相见。（汝州紧接下句）神交客，真假两难研。。（王黼紧接上句）一声金缕传歌扇。再召花魁现眼帘。。"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(素秋接唱)露冷缘何迷花径，自做不平鸣，痴心也可敬。少见俗世有还阳令，又几见蝶化亡灵？(汝州接唱)低徊觅花径，望救活那红鸾命，再续那未了情。(素秋接唱)你因何泪交迸。好，好似杜鹃啼绝岭。(汝州接唱)确是杜鹃啼绝岭。忽染相思症，悲破碎了心灵。"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（愤然起唱爽中板下句）花魁恨，一语恼孤鸾。。赏灯谁断风筝线。盘秋谁断并头莲。。（趋快）有千金，难买还魂券。秋灯灭，难以再重燃，更莫效临昂道士将人骗。（拉腔）"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="end"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（王黼大惊爽中板下句）旧时门外客，原是新状元。。不是冤家无相见。偏是冤家现堂前。。宰阁无心存欺骗。（汝州紧接下句）招魂难有再生船。。（拂袖介）（王黼紧接上句）出画堂，与你重相见。（汝州紧接下句）神交客，真假两难研。。（王黼紧接上句）一声金缕传歌扇。再召花魁现眼帘。。"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="(素秋接唱)露冷缘何迷花径，自做不平鸣，痴心也可敬。少见俗世有还阳令，又几见蝶化亡灵？(汝州接唱)低徊觅花径，望救活那红鸾命，再续那未了情。(素秋接唱)你因何泪交迸。好，好似杜鹃啼绝岭。(汝州接唱)确是杜鹃啼绝岭。忽染相思症，悲破碎了心灵。"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（愤然起唱爽中板下句）花魁恨，一语恼孤鸾。。赏灯谁断风筝线。盘秋谁断并头莲。。（趋快）有千金，难买还魂券。秋灯灭，难以再重燃，更莫效临昂道士将人骗。（拉腔）"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="end"
+                android:padding="24dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="（王黼大惊爽中板下句）旧时门外客，原是新状元。。不是冤家无相见。偏是冤家现堂前。。宰阁无心存欺骗。（汝州紧接下句）招魂难有再生船。。（拂袖介）（王黼紧接上句）出画堂，与你重相见。（汝州紧接下句）神交客，真假两难研。。（王黼紧接上句）一声金缕传歌扇。再召花魁现眼帘。。"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/navigation_left"
+        android:layout_width="140dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white"
-        android:gravity="bottom"
-        android:orientation="vertical">
+        android:background="@android:color/white">
 
         <Button
             android:id="@+id/red"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:onClick="onClick"
             android:text="red" />
 
@@ -61,6 +161,7 @@
             android:id="@+id/green"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:onClick="onClick"
             android:text="green" />
 
@@ -68,13 +169,24 @@
             android:id="@+id/blue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:onClick="onClick"
             android:text="blue" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/navigation_right"
+        android:layout_width="140dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@android:color/white">
 
         <Button
             android:id="@+id/yellow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:onClick="onClick"
             android:text="yellow" />
 
@@ -82,7 +194,16 @@
             android:id="@+id/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:onClick="onClick"
             android:text="black" />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/cyan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="onClick"
+            android:text="cyan" />
+    </FrameLayout>
 </android.support.v4.widget.DrawerLayout>
