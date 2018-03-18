@@ -43,6 +43,7 @@ public class RippleAnimation extends View {
         float startX = getAbsoluteX(onClickView) + newWidth;
         float startY = getAbsoluteY(onClickView) + newHeight;
         //起始半径
+        //因为我们要避免遮挡按钮
         int radius = Math.max(newWidth, newHeight);
         return new RippleAnimation(context, startX, startY, radius);
     }
@@ -56,7 +57,7 @@ public class RippleAnimation extends View {
         mStartRadius = radius;
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        //擦除模式
+        //设置为擦除模式
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
         updateMaxRadius();
         initListener();
@@ -91,9 +92,8 @@ public class RippleAnimation extends View {
         mAnimatorUpdateListener = new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                float progress = (float) animation.getCurrentPlayTime() / mDuration;
                 //更新圆的半径
-                mCurrentRadius = (int) (mMaxRadius * progress) + mStartRadius;
+                mCurrentRadius = (int) (float) animation.getAnimatedValue() + mStartRadius;
                 postInvalidate();
             }
         };
@@ -182,7 +182,7 @@ public class RippleAnimation extends View {
     }
 
     private ValueAnimator getAnimator() {
-        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 0).setDuration(mDuration);
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, mMaxRadius).setDuration(mDuration);
         valueAnimator.addUpdateListener(mAnimatorUpdateListener);
         valueAnimator.addListener(mAnimatorListener);
         return valueAnimator;
