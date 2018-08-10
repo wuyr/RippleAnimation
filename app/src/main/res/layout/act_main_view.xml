@@ -147,7 +147,8 @@
         android:layout_width="140dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:paddingBottom="48dp">
 
         <Button
             android:id="@+id/red"
@@ -180,7 +181,8 @@
         android:layout_width="140dp"
         android:layout_height="match_parent"
         android:layout_gravity="end"
-        android:background="@android:color/white">
+        android:background="@android:color/white"
+        android:paddingBottom="48dp">
 
         <Button
             android:id="@+id/yellow"
