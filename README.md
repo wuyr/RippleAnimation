@@ -17,7 +17,7 @@ implementation 'com.wuyr:rippleanimation:1.0.0'
 
 ### 使用示例:
 
-```
+```java
     public void onClick(View view) {
 
         RippleAnimation.create(view).setDuration(duration).start();
